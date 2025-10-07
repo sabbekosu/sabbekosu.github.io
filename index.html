@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kevin Sabbe — Robotics & AI</title>
+  <meta name="description" content="Personal site for Kevin Sabbe. Robotics & AI projects, experience, education, and résumé." />
+  <meta name="theme-color" content="#FF9E57"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top">Kevin Sabbe</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#about">About</a>
+        <a href="#resume">Résumé</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="intro">
+      <h1>Robotics & AI Student</h1>
+      <p class="lede">
+        I build human-centered robotic systems—real-time perception, expressive motion, and end-to-end polish. I work to bridge the gap between Mechaincal and Computer Science expertise.
+        M.S. Robotics @ Oregon State (SHARE Lab).
+      </p>
+
+      <p class="links">
+        <a href="https://github.com/sabbekosu" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/kevin-a-sabbe/" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="mailto:sabbek@oregonstate.edu">sabbek@oregonstate.edu</a>
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card" onclick="ndaNotice('NAO Comedy Robot — Audience Feedback')" tabindex="0" role="button" aria-label="NAO Comedy Robot — Audience Feedback">
+          <h3>NAO Comedy Robot — Audience Feedback</h3>
+          <p>Audio/vision + ML pipeline for real-time comedy repartee.</p>
+          <button>View details</button>
+        </article>
+        <article class="card" onclick="ndaNotice('Gesture Generation from Natural Prompts')" tabindex="0" role="button" aria-label="Gesture Generation from Natural Prompts">
+          <h3>Gesture Generation from Natural Prompts</h3>
+          <p>Multimodal LLM to joint trajectories, simulation, and iteration for expressive robotic gestures.</p>
+          <button>View details</button>
+        </article>
+        <article class="card" onclick="ndaNotice('Sports Programs Ops Tools')" tabindex="0" role="button" aria-label="Sports Programs Ops Tools">
+          <h3>Sports Programs Ops Tools</h3>
+          <p>Eligibility checks & league ops automation for OSU Sports Programs.</p>
+          <button>View details</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li>
+          <div class="when">May 2024 – Present</div>
+          <div class="what"><strong>Human-Robot Interaction Researcher — OSU SHARE Lab</strong><br />
+          Real-time audio/vision feedback for stand-up robot comedian; Vision-Language-Action model for creating expressive robot gestures</div>
+        </li>
+        <li>
+          <div class="when">Sep 2024 – Jun 2025</div>
+          <div class="what"><strong>Senior Sports Program Associate — OSU Dixon Sports Programs</strong><br />
+          Built internal tools for eligibility checks & league ops. Managed IM leagues and events.</div>
+        </li>
+        <li>
+          <div class="when">Jun 2022 – Sep 2022</div>
+          <div class="what"><strong>Application Engineering Intern — Sanyo Denki America</strong><br />
+          Prototyped mechanical systems and embedded software for multi-gantry demos; integrated sensors for sequences.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>Python</li><li>C++</li><li>CAD (Solidworks, NX)</li><li>Linux/Ubuntu</li><li>ROS</li><li>OpenCV</li><li>ML (scikit-learn)</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="timeline">
+        <li>
+          <div class="when">2025 - Present</div>
+          <div class="what"><strong>M.S., Robotics</strong> — Oregon State University</div>
+        </li>
+        <li>
+          <div class="when">Spring 2025</div>
+          <div class="what"><strong>B.S., Computer Science</strong> — Oregon State University</div>
+        </li>
+        <li>
+          <div class="when">Spring 2025</div>
+          <div class="what"><strong>B.S., Mechanical Engineering</strong> — Oregon State University</div>
+        </li>
+        
+      </ul>
+    </section>
+
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <!-- Put your PDF at: /assets/Kevin_Sabbe_Resume.pdf -->
+      <p><a class="btn" href="assets/Kevin_Sabbe_Resume.pdf" target="_blank" rel="noopener">Open Résumé (PDF)</a></p>
+      <div class="pdf">
+        <object data="assets/Kevin_Sabbe_Resume.pdf" type="application/pdf">
+          <p>Your browser can't display embedded PDFs. <a href="assets/Kevin_Sabbe_Resume.pdf" target="_blank" rel="noopener">Open the résumé</a>.</p>
+        </object>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a class="btn" href="mailto:sabbek@oregonstate.edu">Email Kevin</a></p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">© <span id="year"></span> Kevin Sabbe</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
