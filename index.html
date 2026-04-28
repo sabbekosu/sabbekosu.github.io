@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#FF9E57"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -20,9 +20,7 @@
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
-        <a href="#about">About</a>
-        <a href="#resume">Résumé</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Resume and Contact</a>
       </nav>
     </div>
   </header>
@@ -32,11 +30,16 @@
       <div class="intro-glow intro-glow-1"></div>
       <div class="intro-glow intro-glow-2"></div>
       <div class="intro-content">
-        <p class="intro-eyebrow">M.S. Robotics · Oregon State University · SHARE Lab</p>
-        <h1>Robotics &amp; AI<br /><span class="accent-text">Student Researcher</span></h1>
+        <div class="intro-identity">
+          <img src="assets/head_shot.png" alt="Headshot of Kevin Sabbe" class="intro-photo" />
+          <div>
+            <p class="intro-name">Kevin Sabbe</p>
+            <p class="intro-subtitle">Robotics &amp; AI Student Researcher</p>
+          </div>
+        </div>
         <p class="lede">
-          I build human-centered robotic systems — real-time perception, expressive motion, and end-to-end polish.
-          Bridging the gap between Mechanical Engineering and Computer Science expertise.
+          I'm pursuing master's degrees in Robotics and Artificial Intelligence at Oregon State University, building on my background in Computer Science and Mechanical Engineering.
+          My research at the SHARE Lab focuses on human-robot interaction and automated robot gesture design, including models that translate natural language into expressive robot motion so robots can communicate intent and become more useful partners in how people work and interact with robotic systems.
         </p>
         <p class="links">
           <a href="https://github.com/sabbekosu" target="_blank" rel="noopener">
@@ -61,34 +64,23 @@
       <h2>Projects</h2>
       <div class="cards">
 
-        <article class="card card-clickable" onclick="openModal('nao')" tabindex="0" role="button" aria-label="NAO Comedy Robot — Audience Feedback">
-          <div class="card-tags">
-            <span class="tag tag-paper">Research Paper</span>
-            <span class="tag tag-ml">Audio ML · Computer Vision · LLM</span>
-          </div>
-          <h3>NAO Comedy Robot — Audience Feedback</h3>
-          <p>Audio/vision + ML pipeline for real-time comedy repartee and audience emotion detection with a NAO humanoid robot.</p>
-          <button class="card-btn">View details</button>
-        </article>
-
-        <article class="card card-clickable" onclick="window.open('https://github.com/sabbekosu/AI_Gestures','_blank')" tabindex="0" role="button" aria-label="Gesture Generation from Natural Prompts">
-          <div class="card-tags">
-            <span class="tag tag-ml">LLM · Simulation</span>
-          </div>
+        <article class="card card-clickable" onclick="openModal('gestures')" tabindex="0" role="button" aria-label="Gesture Generation from Natural Prompts">
           <h3>Gesture Generation from Natural Prompts</h3>
-          <p>Multimodal LLM-to-joint-trajectory pipeline generating expressive robotic gestures from text prompts, with Webots simulation and iterative refinement.</p>
-          <button class="card-btn card-btn-link">View on GitHub ↗</button>
+          <p>Turns natural language prompts into robot joint motions, making it easier for non-experts to describe expressive gestures and test them safely in simulation.</p>
+          <button class="card-btn" onclick="event.stopPropagation(); window.open('https://github.com/sabbekosu/AI_Gestures','_blank')">View on GitHub ↗</button>
+        </article>
+        
+        <article class="card card-clickable" onclick="openModal('nao')" tabindex="0" role="button" aria-label="NAO Comedy Robot — Audience Feedback">
+          <h3>NAO Comedy Robot — Audience Feedback</h3>
+          <p>A real-time system that helps a humanoid robot read audience reactions through audio and vision, then adjust comedic responses so human-robot interaction feels more responsive and natural.</p>
+          <button class="card-btn card-btn-link" onclick="event.stopPropagation(); openModal('naoDetails')">View details</button>
         </article>
 
-        <article class="card card-clickable" onclick="window.open('https://arxiv.org/abs/2412.07990','_blank')" tabindex="0" role="button" aria-label="Adaptive Querying for Reward Learning">
-          <div class="card-tags">
-            <span class="tag tag-paper">Research Paper</span>
-            <span class="tag tag-hri">Reward Learning</span>
-          </div>
+        <article class="card card-clickable" onclick="openModal('reward')" tabindex="0" role="button" aria-label="Adaptive Querying for Reward Learning">
           <h3>Adaptive Querying for Reward Learning</h3>
-          <p>Co-authored paper on adaptive feedback selection for learning robot reward functions from multiple modes of human feedback, balancing cost and information gain.</p>
+          <p>Improves how robots learn from human feedback by choosing more useful questions, reducing the burden on people while helping reward models better match human preferences.</p>
           <p class="card-authors">Anand · Nwagwu · <strong>Sabbe</strong> · Fitter · Saisubramanian</p>
-          <button class="card-btn card-btn-link">View on arXiv ↗</button>
+          <button class="card-btn" onclick="event.stopPropagation(); window.open('https://arxiv.org/abs/2412.07990','_blank')">View on arXiv ↗</button>
         </article>
 
       </div>
@@ -132,7 +124,7 @@
       <h2>Skills</h2>
       <div class="skill-groups">
         <div class="skill-group">
-          <p class="skill-group-label">Languages</p>
+          <p class="skill-group-label">Research &amp Project Programming Languages</p>
           <ul class="skills">
             <li>Python</li><li>C++</li><li>JavaScript</li>
           </ul>
@@ -157,43 +149,28 @@
       <ul class="timeline">
         <li>
           <div class="when">Spring 2025 - Present</div>
-          <div class="what"><strong>M.S., Robotics</strong> — Oregon State University</div>
+          <div class="what"><strong>M.S. Robotics</strong> — Oregon State University</div>
+        </li>
+        <li>
+          <div class="when">Spring 2025 - Present</div>
+          <div class="what"><strong>M.S. Artificial Intelligence</strong> — Oregon State University</div>
         </li>
         <li>
           <div class="when">Fall 2021 - Spring 2025</div>
-          <div class="what"><strong>B.S., Computer Science</strong> — Oregon State University</div>
+          <div class="what"><strong>B.S. Computer Science</strong> — Oregon State University</div>
         </li>
         <li>
           <div class="when">Fall 2021 - Spring 2025</div>
-          <div class="what"><strong>B.S., Mechanical Engineering</strong> — Oregon State University</div>
+          <div class="what"><strong>B.S. Mechanical Engineering</strong> — Oregon State University</div>
         </li>
       </ul>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p class="about-text">
-        I'm a dual-degree engineer (CS + Mechanical) turned robotics researcher. My work lives at the intersection of expressive motion, human-robot interaction, and machine learning — turning high-level intent into physical robot behavior.
-        Currently pursuing an M.S. in Robotics at Oregon State University's
-        <a href="https://share.oregonstate.edu" target="_blank" rel="noopener">SHARE Lab</a>,
-        where I focus on making robots more communicative, adaptive, and safe to be around.
-      </p>
-    </section>
-
-    <section id="resume">
-      <h2>Résumé</h2>
-      <p><a class="btn" href="assets/Kevin_Sabbe_Resume.pdf" target="_blank" rel="noopener">Open Résumé (PDF) ↗</a></p>
-      <div class="pdf">
-        <object data="assets/Kevin_Sabbe_Resume.pdf" type="application/pdf">
-          <p>Your browser can't display embedded PDFs. <a href="assets/Kevin_Sabbe_Resume.pdf" target="_blank" rel="noopener">Open the résumé directly</a>.</p>
-        </object>
-      </div>
-    </section>
-
     <section id="contact">
-      <h2>Contact</h2>
+      <h2>Resume and Contact</h2>
       <p class="contact-lede">Feel free to reach out about research, collaboration, or just to say hi.</p>
       <div class="contact-links">
+        <a class="btn" href="assets/Kevin_Sabbe_Resume.pdf" download>Download Resume</a>
         <a class="btn" href="mailto:sabbek360@gmail.com">sabbek360@gmail.com</a>
         <a class="btn btn-secondary" href="https://www.linkedin.com/in/kevin-a-sabbe/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
