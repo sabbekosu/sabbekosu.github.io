@@ -1,5 +1,9 @@
 const device = document.querySelector(".device");
 const lcd = device.querySelector(".lcd");
+const display = lcd.querySelector(".pages");
+display.tabIndex = 0;
+display.setAttribute("role", "region");
+display.setAttribute("aria-label", "Handset display");
 const screens = new Map([...device.querySelectorAll("[data-screen]")].map(screen => [screen.id, screen]));
 const appKeys = [...device.querySelectorAll(".keys a")];
 const parentCommand = document.querySelector("#parent-command");
@@ -41,6 +45,7 @@ function openScreen(screen, { focus = false, animate = false } = {}) {
     void lcd.offsetWidth;
     lcd.classList.add("redraw");
   }
+  if (changed) display.scrollTop = 0;
   if (focus) screen.querySelector("h1,h2").focus({preventScroll: true});
   currentScreen = screen;
 }
@@ -61,7 +66,7 @@ document.addEventListener("click", event => {
   if (location.hash !== link.hash) history.pushState(null, "", link.hash);
   openScreen(screen, {focus: true, animate: true});
   // Only reposition the page when the display is outside the visitor's view.
-  if (device.getBoundingClientRect().top < -60 || device.getBoundingClientRect().top >= innerHeight) {
+  if (!device.contains(link) && (device.getBoundingClientRect().top < 0 || device.getBoundingClientRect().top >= innerHeight)) {
     device.scrollIntoView({block: "start"});
   }
 });
@@ -145,3 +150,17 @@ poses.addEventListener("click", event => {
 });
 selectClip(clips[0]);
 document.querySelector(".pose-strip").hidden = false;
+
+const volleyball = device.querySelector(".volleyball");
+const court = volleyball.querySelector(".court");
+const serveResult = volleyball.querySelector(".serve-result");
+volleyball.hidden = false;
+volleyball.querySelector("button").addEventListener("click", () => {
+  court.classList.remove("served");
+  void court.offsetWidth;
+  court.classList.add("served");
+  serveResult.textContent = reducedMotion.matches ? "Ace!" : "";
+});
+court.addEventListener("animationend", event => {
+  if (event.animationName === "serve-arc") serveResult.textContent = "Ace!";
+});

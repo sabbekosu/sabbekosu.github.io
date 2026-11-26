@@ -32,7 +32,6 @@ h1:focus,h2:focus { outline: none; }
 .mast a { text-decoration: none; }
 .mast nav a:hover, .brand:hover { text-decoration: underline; }
 .brand { gap: 10px; font: 600 1.38rem/1 var(--heading); }
-.monogram { padding: 7px; background: var(--ink); color: white; border-radius: 3px; font-size: 1.1rem; letter-spacing: -.06em; }
 .download { gap: 8px; border: 1px solid #737f81; border-radius: 4px; padding: 8px 12px; background: #f7f7f1; }
 .device { position: relative; padding: 0 23px; color: #f1f2e7; border: 2px solid #151e28; border-radius: 28px 31px 22px 22px; background: linear-gradient(133deg,#526270 0%,#384654 28%,#2d3b49 73%,#43525f); box-shadow: inset 0 2px 1px #94a0a7,inset 3px 0 2px #61707b,inset -3px -4px 2px #182530,0 3px 0 #8e978d,0 12px 18px -9px #18283162; }
 .bezel { height: 45px; padding-inline: 8px; display: flex; align-items: center; gap: 22px; }
@@ -46,7 +45,9 @@ h1:focus,h2:focus { outline: none; }
 .status,.command { flex: none; display: flex; align-items: center; justify-content: space-between; padding: 6px 16px; font: 600 .8125rem var(--mono); }
 .status { color: #e3edce; background: #3d4d36; border-bottom: 1px solid #253923; }
 .status > span,.command a { display: inline-flex; align-items: center; gap: 9px; }
-.indicators { padding-right: 3px; }
+.status > span:first-child { min-width: 0; margin-right: 12px; }
+#status-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.indicators { flex: none; padding-right: 3px; }
 .signal { width: 19px; height: 12px; background: currentColor; clip-path: polygon(0 78%,15% 78%,15% 100%,28% 100%,28% 53%,43% 53%,43% 100%,56% 100%,56% 28%,72% 28%,72% 100%,85% 100%,85% 0,100% 0,100% 100%,0 100%); }
 .battery { width: 23px; height: 11px; border: 1px solid; padding: 1px; position: relative; background: repeating-linear-gradient(90deg,currentColor 0 5px,transparent 5px 6px) content-box; }
 .battery::after { content:""; position: absolute; right: -3px; top: 2px; height: 5px; width: 2px; background: currentColor; }
@@ -64,11 +65,12 @@ h1:focus,h2:focus { outline: none; }
 .screen { scroll-margin-top: 100px; padding: 22px clamp(19px,3.25vw,43px); }
 .screen + .screen { border-top: 1px solid var(--lcd-rule); }
 .device.ready .screen { border-top: 0; }
-.device.ready .pages { min-height: 310px; }
+.device.ready .pages { flex: none; height: 22rem; overflow-y: auto; scrollbar-gutter: stable; scrollbar-color: #728663 transparent; }
+.pages:focus-visible { outline: 2px solid var(--lcd-ink); outline-offset: -3px; }
 .screen h2,.lab h2 { font: 600 clamp(2.05rem,3.3vw,2.8rem)/1.05 var(--heading); letter-spacing: -.025em; }
 .screen p { max-width: 74ch; }
 .profile { display: grid; grid-template-columns: minmax(0,1fr) 22%; gap: 5%; align-items: center; }
-.ready .profile { min-height: 310px; }
+.ready .profile { min-height: 100%; }
 .eyebrow,.meta,.location,.citation,.lab-heading span,.deck-title,.pose-strip > span { font: 600 .75rem/1.5 var(--mono); }
 .eyebrow,.location { display: flex; align-items: center; gap: 8px; }
 .eyebrow,.deck-title,.pose-strip > span { letter-spacing: .1em; text-transform: uppercase; }
@@ -168,7 +170,7 @@ footer { justify-content: space-between; gap: 15px; padding-block: 19px 25px; fo
   .portrait { grid-column: 2; grid-row: 1/4; align-self: center; }
   .portrait img { image-rendering: auto; }
   .screen { scroll-margin-top: 155px; padding: 18px 15px; }
-  .device.ready .pages,.ready .profile { min-height: 270px; }
+  .device.ready .pages { height: clamp(17rem, 49svh, 23rem); }
   .profile h1 { margin: 8px 0; }
   .status,.command { padding-inline: 10px; }
   .file-list { grid-template-columns: 1fr; }
@@ -195,7 +197,26 @@ footer { justify-content: space-between; gap: 15px; padding-block: 19px 25px; fo
   .device { color: black; box-shadow: none; background: white; padding: 0; border: 0; }
   .console,.lcd,.glass { display: block; background: white; border: 0; box-shadow: none; }
   .device .screen[hidden] { display: block !important; }
-  .device.ready .profile,.device.ready .pages { min-height: 0; }
+  .device.ready .profile,.device.ready .pages { height: auto; min-height: 0; overflow: visible; }
+  .volleyball { display: none; }
   .keys,.bezel,.command,.status,.hinge,.lab,footer,.skip { display: none; }
   .screen { break-inside: avoid; }
+}
+
+.volleyball { display: flex; align-items: center; gap: 10px; padding: 0 0 10px 22px; }
+.volleyball button { font: 600 .8125rem var(--mono); color: var(--lcd-ink); background: transparent; border: 1px solid currentColor; border-radius: 3px; cursor: pointer; padding: 7px 9px; }
+.court { position: relative; width: 7rem; height: 34px; border-bottom: 2px solid var(--lcd-ink); }
+.court::before { content: ""; position: absolute; bottom: 0; left: 50%; height: 14px; width: 3px; background: var(--lcd-ink); }
+.ball { position: absolute; left: 5%; bottom: 3px; width: 12px; height: 12px; fill: var(--lcd); stroke: var(--lcd-ink); stroke-width: 1.3; }
+.court.served .ball { left: 88%; bottom: 0; }
+.serve-result { font: 600 .8125rem var(--mono); }
+@media (prefers-reduced-motion: no-preference) {
+  .court.served .ball { animation: serve-arc .75s linear; }
+  @keyframes serve-arc {
+    0% { left: 5%; bottom: 3px; }
+    25% { left: 25%; bottom: 19px; }
+    50% { left: 47%; bottom: 24px; }
+    75% { left: 68%; bottom: 18px; }
+    100% { left: 88%; bottom: 0; transform: rotate(240deg); }
+  }
 }

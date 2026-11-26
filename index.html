@@ -6,19 +6,19 @@
   <meta name="theme-color" content="#ebece5">
   <title>Kevin Sabbe | Human–Robot Interaction</title>
   <meta name="description" content="Kevin Sabbe’s research portfolio at Oregon State University. Explore expressive robot motion, robot comedy, assistive robotics, and engineering projects.">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=2">
-  <script defer src="script.js?v=2"></script>
+  <link rel="icon" href="assets/favicon.svg?v=3" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script defer src="script.js?v=3"></script>
 </head>
 <body id="top">
 <a class="skip" href="#projects">Skip to research</a>
-<header class="mast wrap"><a class="brand" href="#profile"><span class="monogram" aria-hidden="true">KS</span> Kevin Sabbe</a>
+<header class="mast wrap"><a class="brand" href="#profile">Kevin Sabbe</a>
 <nav aria-label="Profile links"><a href="https://github.com/sabbekosu">GitHub</a><a class="download" href="assets/Kevin_Sabbe_Resume.pdf" download><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#download"/></svg> Download CV</a></nav></header>
 <main class="wrap">
- <div class="device" aria-label="Portfolio communicator" role="region">
-  <div class="bezel"><span><b>KS</b> Communicator</span><i class="speaker" aria-hidden="true"></i><span class="model">HRI Edition</span></div>
+ <div class="device" aria-label="KineDeck 91 portfolio handset" role="region">
+  <div class="bezel"><span><b>KineDeck</b> 91</span><i class="speaker" aria-hidden="true"></i><span class="model">HRI Edition</span></div>
   <div class="console">
-   <nav class="keys" aria-label="Communicator applications"><a href="#profile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#card"/></svg> Profile</a>
+   <nav class="keys" aria-label="KineDeck applications"><a href="#profile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#card"/></svg> Profile</a>
 <a href="#projects"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#folder"/></svg> Research</a>
 <a href="#experience"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#work"/></svg> Experience</a>
 <a href="#education"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#book"/></svg> Education</a>
@@ -89,7 +89,13 @@
 <details><summary><span>Graduate Teaching Assistant</span><small>Sep 2025 – Present</small></summary><p><strong>OSU College of Engineering.</strong> Develop labs and course materials for graduate Intro to Robotics and undergraduate Intro to Python Programming.</p></details>
 <details><summary><span>Human–Robot Interaction Researcher</span><small>May 2024 – Present</small></summary><p><strong>OSU SHARE Lab.</strong> Design robot behaviors and run human-subjects studies on expressive motion and social feedback.</p></details>
 <details><summary><span>Senior Sports Program Associate</span><small>Sep 2024 – Jun 2025</small></summary><p><strong>OSU Dixon Sports Programs.</strong> Managed intramural leagues and built tools to check player eligibility.</p></details>
-<details><summary><span>Club President</span><small>May 2022 – Jun 2025</small></summary><p><strong>OSU Men’s Club Volleyball.</strong> Grew membership from 44 to 113 and annual fundraising from $1,500 to $20,000 while organizing clinics and tournaments.</p></details>
+<details><summary><span>Club President</span><small>May 2022 – Jun 2025</small></summary><p><strong>OSU Men’s Club Volleyball.</strong> Grew membership from 44 to 113 and annual fundraising from $1,500 to $20,000 while organizing clinics and tournaments.</p>
+  <div class="volleyball" hidden>
+    <button type="button" id="serve" title="Serve a volleyball">Serve</button>
+    <div class="court" aria-hidden="true"><svg class="ball" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7"/><path d="M8 8Q4 7 3 3m5 5q2-4 7-4M8 8q2 4 0 7M4 12Q5 10 8 8M8 1q-1 4 0 7m5 5q-1-3-5-5"/></svg></div>
+    <span class="serve-result" role="status"></span>
+  </div>
+</details>
 <details><summary><span>Application Engineering Intern</span><small>Jun – Sep 2022</small></summary><p><strong>Sanyo Denki America.</strong> Built mechanical prototypes and wrote embedded control software for multi-gantry demonstrations using cameras, sensors, and operator input.</p></details></div>
 </section>
 <section id="education" data-screen data-app="education" data-title="Education" class="screen">
@@ -114,11 +120,11 @@
    <video id="player" controls playsinline preload="none" width="800" height="450" poster="assets/nao-wave.webp" aria-label="Wave hello, silent Webots simulation"><source src="assets/nao-wave.mp4" type="video/mp4"></video>
    <div class="pose-strip" hidden><span>Inspect a pose</span><div id="poses"></div></div>
   </div>
-  <div class="library"><h3>From prompt to gesture</h3><p>These are actual runs from my motion generator. Pick a prompt to see how the same robot uses its hands, posture, and timing to get a different idea across.</p>
+  <div class="library"><h3>From prompt to gesture</h3><p>Watch NAO wave, then compare two human-guided motions from my emotion research. Both use the same robot. Look at where its hands go and what happens to its head as the pose settles.</p>
    <nav class="clips" aria-label="Gesture recordings">
     <a href="assets/nao-wave.mp4" data-clip="wave" data-times="0.4,2.6,5.5" data-label="Wave hello">Wave hello</a>
-    <a href="assets/nao-bow.mp4" data-clip="bow" data-times="0.5,3.8,6.1" data-label="Bow to applause">Bow to applause</a>
-    <a href="assets/nao-disapproval.mp4" data-clip="disapproval" data-times="0.5,3.0,5.7" data-label="Show strong disapproval">Show strong disapproval</a>
+    <a href="assets/nao-happy.mp4" data-clip="happy" data-times="1.5,2.1,2.8" data-label="Happiness">Happiness</a>
+    <a href="assets/nao-sad.mp4" data-clip="sad" data-times="1.7,2.6,4.4" data-label="Sadness">Sadness</a>
    </nav><a class="story-link" href="#motion">How the gestures are made</a>
   </div>
  </div></section>
