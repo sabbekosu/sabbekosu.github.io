@@ -7,85 +7,121 @@
   <title>Kevin Sabbe | Human–Robot Interaction</title>
   <meta name="description" content="Kevin Sabbe’s research portfolio at Oregon State University. Explore expressive robot motion, robot comedy, assistive robotics, and engineering projects.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="styles.css?v=2">
+  <script defer src="script.js?v=2"></script>
 </head>
 <body id="top">
 <a class="skip" href="#projects">Skip to research</a>
-<header class="mast wrap">
-  <a class="brand" href="#top"><span class="monogram" aria-hidden="true">KS</span> <span><span class="brand-prefix">Personal </span>portfolio</span></a>
-  <nav aria-label="Profile links"><a class="github" href="https://github.com/sabbekosu">GitHub</a><a class="download" href="assets/Kevin_Sabbe_Resume.pdf" download><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#download"/></svg> Download CV</a></nav>
-</header>
+<header class="mast wrap"><a class="brand" href="#profile"><span class="monogram" aria-hidden="true">KS</span> Kevin Sabbe</a>
+<nav aria-label="Profile links"><a href="https://github.com/sabbekosu">GitHub</a><a class="download" href="assets/Kevin_Sabbe_Resume.pdf" download><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#download"/></svg> Download CV</a></nav></header>
 <main class="wrap">
-  <section class="device" aria-labelledby="profile-name">
-    <div class="bezel"><span><b>KS</b> COMMUNICATOR</span><i class="speaker" aria-hidden="true"></i><span class="model">HRI EDITION</span></div>
-    <div class="glass">
-      <div class="lcd">
-        <div class="status"><span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#card"/></svg> Contact card</span><span class="indicators" aria-hidden="true"><i class="signal"></i><i class="battery"></i></span></div>
-        <div class="profile">
-          <div class="identity">
-            <h1 id="profile-name"><img src="assets/name-lcd.png" alt="Kevin Sabbe" width="62" height="7"></h1>
-            <p class="role">Human–Robot Interaction Researcher</p>
-            <p class="intro">I study how robots communicate through movement and how they can respond when an interaction goes wrong. I’m a graduate researcher in robotics and artificial intelligence at Oregon State University.</p>
-            <p class="location"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#pin"/></svg> Corvallis, Oregon</p>
-          </div>
-          <div class="portrait"><img src="assets/portrait-lcd.png" width="240" height="210" alt="Kevin Sabbe"></div>
-        </div>
-      </div>
-    </div>
-    <nav class="keys" aria-label="Portfolio sections">
-      <a href="#projects"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#folder"/></svg> Research</a>
-      <a href="#experience"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#work"/></svg> Experience</a>
-      <a href="#education"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#book"/></svg> Education</a>
-      <a href="#contact"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#mail"/></svg> Contact</a>
-    </nav>
-  </section>
-  <section id="projects" class="directory" aria-labelledby="research-heading">
-    <div class="section-head"><h2 id="research-heading"><span class="section-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#folder"/></svg></span> Research &amp; projects</h2><span class="count">6 records</span></div>
-    <div class="browser">
-      <nav class="index" aria-label="Project records" id="project-index">
-        <div class="pane-title">File directory</div>
-        <a href="#motion"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#robot"/></svg>Expressive robot motion</a>
-        <a href="#comedy"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#mic"/></svg>Robot comedy</a>
-        <a href="#therapy"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#therapy"/></svg>Robot-assisted therapy</a>
-        <a href="#reward"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#paper"/></svg>Adaptive reward learning</a>
-        <a href="#kinova"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arm"/></svg>Kinova arm control</a>
-        <a href="#source-check"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg>Source Check</a>
-      </nav>
-      <div class="records">
-        <article id="motion" class="record"><p class="meta">Human–robot interaction · First author</p><h3>Expressive robot motion</h3>
-          <p>What does “wave hello” look like to a robot? I built a system that turns a description or reference video into joint movements. A designer can watch the robot in Webots, describe what feels off, and try the gesture again.</p>
-          <figure><video controls playsinline preload="none" width="800" height="450" poster="assets/nao-wave.webp" aria-label="A simulated NAO raises its hand and waves hello. Silent video."><source src="assets/nao-wave.mp4" type="video/mp4"></video><figcaption>NAO waving hello in Webots · Silent simulation</figcaption></figure>
-          <p>In a study with 127 participants, people compared 21 simulated motions across seven emotions. They recognized the intended emotion in 48.37% of human-guided designs, compared with 27.33% of hand-designed motions.</p><p class="citation">Manuscript submitted to HRI 2027.</p>
-          <a class="record-link" href="https://github.com/sabbekosu/AI_Gestures">Explore the code on GitHub</a>
-        </article>
-        <article id="comedy" class="record"><p class="meta">Human–robot interaction · First author</p><h3>Robot comedy</h3><p>How should a robot recover when a joke falls flat? I programmed a NAO comedian to choose a follow-up using sound, facial expressions, or spoken feedback from its audience.</p><p>Across 19 live performances with 80 participants, the three strategies produced similar ratings with no statistically significant differences. In interviews, audience members described how hard it could be to tell when the robot was responding to them.</p><p class="citation">Kevin A. Sabbe &amp; Naomi T. Fitter · ACM Transactions on Human-Robot Interaction, 2026</p><a class="record-link" href="https://doi.org/10.1145/3848636">Read the comedy study</a></article>
-        <article id="therapy" class="record"><p class="meta">Assistive robotics · Graduate research</p><h3>Robot-assisted physical therapy</h3><p>I interview physical therapy practitioners to understand where a robot could help during a session. Their descriptions of clinical routines guide the requirements for our prototype.</p><p>Following an initial evaluation with people, I’m helping prepare the next round of testing for skilled nursing facilities.</p></article>
-        <article id="reward" class="record"><p class="meta">Human feedback · Publication</p><h3>Adaptive querying for reward learning</h3><p>When a robot can ask a person only a few questions, which ones should it ask? Our work examines how to choose both the situation to ask about and the type of feedback to request, so an agent can learn about unwanted side effects of its actions.</p><p class="citation">Y. Anand, N. Nwagwu, K. Sabbe, N. T. Fitter &amp; S. Saisubramanian · Frontiers in Robotics and AI, 2026</p><a class="record-link" href="https://doi.org/10.3389/frobt.2025.1734564">Read the reward-learning paper</a></article>
-        <article id="kinova" class="record"><p class="meta">Robot control · Simulation</p><h3>Kinova arm control</h3><p>I built a PyBullet demo where you can push a simulated Kinova Gen3 arm while it carries a cube. The arm yields to the applied force, returns to its paused waypoint when you release it, and finishes placing the cube.</p><p>The demo includes keyboard control of the gripper, individual joints, and end-effector pose.</p><a class="record-link" href="https://github.com/sabbekosu/admittance_control_kinova">Explore the Kinova demo on GitHub</a></article>
-        <article id="source-check" class="record"><p class="meta">Developer tools · Teaching</p><h3>Source Check</h3><p>While teaching introductory Python, I built a TypeScript extension for VS Code that helps students document where pasted code came from. It works with Python files and Jupyter notebooks and is used in our undergraduate course.</p><p>I also developed tools for comparing submissions against starter code so reviewers can focus on what a student added.</p></article>
-        <a class="to-index" href="#project-index">Back to file directory</a>
-      </div>
-    </div>
-  </section>
-  <section id="experience" class="resume-section"><div class="section-head"><h2><span class="section-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#work"/></svg></span> Experience</h2></div>
-    <dl class="timeline">
-      <dt>Sep 2026 – Present</dt><dd><h3>Graduate Research Assistant</h3><p class="org">Oregon State University</p><p>Translate practitioner interviews into design requirements and evaluation plans for robot-assisted physical therapy.</p></dd>
-      <dt>Sep 2025 – Present</dt><dd><h3>Graduate Teaching Assistant</h3><p class="org">OSU College of Engineering</p><p>Develop labs and course materials for graduate Intro to Robotics and undergraduate Intro to Python Programming.</p></dd>
-      <dt>May 2024 – Present</dt><dd><h3>Human–Robot Interaction Researcher</h3><p class="org">OSU SHARE Lab</p><p>Design robot behaviors and run human-subjects studies on expressive motion and social feedback.</p></dd>
-      <dt>Sep 2024 – Jun 2025</dt><dd><h3>Senior Sports Program Associate</h3><p class="org">OSU Dixon Sports Programs</p><p>Managed intramural leagues and built tools to check player eligibility.</p></dd>
-      <dt>May 2022 – Jun 2025</dt><dd><h3>Club President</h3><p class="org">OSU Men’s Club Volleyball</p><p>Grew membership from 44 to 113 and annual fundraising from $1,500 to $20,000 while organizing clinics and tournaments.</p></dd>
-      <dt>Jun – Sep 2022</dt><dd><h3>Application Engineering Intern</h3><p class="org">Sanyo Denki America</p><p>Built mechanical prototypes and wrote embedded control software for multi-gantry demonstrations using cameras, sensors, and operator input.</p></dd>
-    </dl>
-  </section>
-  <section id="education" class="resume-section"><div class="section-head"><h2><span class="section-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#book"/></svg></span> Education &amp; skills</h2></div>
-    <div class="education-grid"><div><h3>Oregon State University</h3><p class="meta">Expected June 2027</p><p>M.S., double major in Robotics and Artificial Intelligence</p><p class="meta">June 2025 · Cum laude</p><p>B.S., double major in Computer Science (Robotic Intelligence track) and Mechanical Engineering</p></div>
+ <div class="device" aria-label="Portfolio communicator" role="region">
+  <div class="bezel"><span><b>KS</b> Communicator</span><i class="speaker" aria-hidden="true"></i><span class="model">HRI Edition</span></div>
+  <div class="console">
+   <nav class="keys" aria-label="Communicator applications"><a href="#profile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#card"/></svg> Profile</a>
+<a href="#projects"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#folder"/></svg> Research</a>
+<a href="#experience"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#work"/></svg> Experience</a>
+<a href="#education"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#book"/></svg> Education</a>
+<a href="#contact"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#mail"/></svg> Contact</a></nav>
+   <div class="glass"><div class="lcd">
+    <div class="status"><span><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#card"/></svg> <span id="status-title">Profile</span></span><span class="indicators" aria-hidden="true"><i class="signal"></i><i class="battery"></i></span></div>
+    <div class="pages"><section id="profile" data-screen data-app="profile" data-title="Profile" class="screen profile">
+<div class="identity">
+  <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#card"/></svg> OSU SHARE Lab</p>
+  <h1 tabindex="-1"><img src="assets/name-lcd.png" alt="Kevin Sabbe" width="62" height="7"></h1>
+  <p class="role">Human–robot interaction researcher</p>
+  <p class="intro">I build robots that gesture, tell jokes, and try to read the room. At Oregon State, I study what people actually see in those behaviors and how their feedback can change the next thing a robot does.</p>
+  <p class="location"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#pin"/></svg> Corvallis, Oregon</p>
+</div>
+<div class="portrait"><img src="assets/portrait-lcd.png" width="240" height="210" alt="Kevin Sabbe"></div>
+</section>
+<section id="projects" data-screen data-app="projects" data-title="Research" class="screen">
+<h2 tabindex="-1">Research &amp; projects</h2>
+<nav class="file-list" id="project-index" aria-label="Project files"><a href="#motion"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#robot"/></svg><span>Expressive robot motion</span><i aria-hidden="true">›</i></a>
+<a href="#comedy"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#mic"/></svg><span>Robot comedy</span><i aria-hidden="true">›</i></a>
+<a href="#therapy"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#therapy"/></svg><span>Robot-assisted therapy</span><i aria-hidden="true">›</i></a>
+<a href="#reward"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#paper"/></svg><span>Adaptive reward learning</span><i aria-hidden="true">›</i></a>
+<a href="#kinova"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arm"/></svg><span>Kinova arm control</span><i aria-hidden="true">›</i></a>
+<a href="#source-check"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg><span>Source Check</span><i aria-hidden="true">›</i></a>
+</nav>
+</section>
+<section id="motion" data-screen data-app="projects" data-title="Expressive robot motion" class="screen record">
+<p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#robot"/></svg> Motion design · First author</p>
+<h2 tabindex="-1">Teaching a robot to wave</h2>
+<p>Give the model the words “wave hello” and it still needs to decide which joints move, how far, and for how long. My system reads the robot’s joint limits and turns a prompt or reference video into timed poses. Webots plays them back so the designer can see what a second prompt needs to change.</p>
+<p>I wanted to know whether that extra turn mattered to someone watching. In a study with 127 people and 21 simulated motions, viewers recognized the intended emotion in 48% of human-guided designs and 27% of hand-designed ones.</p>
+<p class="citation">Submitted to HRI 2027.</p>
+<div class="page-actions"><a href="#motion-lab">Try the motion player</a><a href="https://github.com/sabbekosu/AI_Gestures">Project code</a></div>
+</section><section id="comedy" data-screen data-app="projects" data-title="Robot comedy" class="screen record">
+<p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#mic"/></svg> Live performances · First author</p>
+<h2 tabindex="-1">When the joke falls flat</h2>
+<p>The most interesting part of a robot’s stand-up set comes just after the punchline. My NAO comedian could listen to the room, look at faces, or ask the audience directly. Each version had to turn that very different signal into the same decision about which follow-up to deliver.</p>
+<p>We tried all three across 19 live performances with 80 people. None of the sensing strategies produced significantly better ratings. In interviews, people described how hard it was to tell whether the robot had changed its act in response to them.</p>
+<p class="citation">Kevin A. Sabbe and Naomi T. Fitter · ACM THRI, 2026.</p>
+<div class="page-actions"><a href="https://doi.org/10.1145/3848636">Read the paper</a></div>
+</section><section id="therapy" data-screen data-app="projects" data-title="Robot-assisted therapy" class="screen record">
+<p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#therapy"/></svg> Assistive robotics</p>
+<h2 tabindex="-1">Where does a robot fit into therapy?</h2>
+<p>Before deciding what a therapy robot should do, I ask practitioners to walk me through the work they already do. A useful interview gets down to a particular moment in a session where a clinician could use an extra hand.</p>
+<p>Those conversations shape what our prototype needs to do and what we should look for when we test it. We’ve run an initial evaluation with people. The next setting we’re preparing for is skilled nursing facilities.</p>
+</section><section id="reward" data-screen data-app="projects" data-title="Adaptive reward learning" class="screen record">
+<p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#paper"/></svg> Learning from human feedback</p>
+<h2 tabindex="-1">Is this a good time to ask?</h2>
+<p>Imagine giving a robot a reward for reaching a goal and watching it take a shortcut through a vase. The robot did what you rewarded. How can it learn which side effects matter when you only have time to answer a few questions?</p>
+<p>Our approach lets the agent choose both where to ask and what kind of answer to request. A quick approval costs little. A correction takes more effort but can tell the robot what to do instead. The agent weighs how much it expects to learn against that cost.</p>
+<p class="citation">Y. Anand, N. Nwagwu, K. Sabbe, N. T. Fitter and S. Saisubramanian · Frontiers in Robotics and AI, 2026.</p>
+<div class="page-actions"><a href="https://doi.org/10.3389/frobt.2025.1734564">Read the paper</a></div>
+</section><section id="kinova" data-screen data-app="projects" data-title="Kinova arm control" class="screen record">
+<p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#arm"/></svg> Robot control · PyBullet</p>
+<h2 tabindex="-1">Give the arm a push</h2>
+<p>A simulated Kinova Gen3 is halfway through carrying a cube. Pick a point on its forearm and push sideways. The demo pauses the planned motion, and the applied force changes where the arm is trying to go. Keep holding and you can see it give way.</p>
+<p>When you release the push, the arm finds the waypoint it left and finishes placing the cube. You can try the same push at the wrist, move individual joints, or take over the gripper with the keyboard.</p>
+<div class="page-actions"><a href="https://github.com/sabbekosu/admittance_control_kinova">Run the demo on GitHub</a></div>
+</section><section id="source-check" data-screen data-app="projects" data-title="Source Check" class="screen record">
+<p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#code"/></svg> Developer tools · Teaching</p>
+<h2 tabindex="-1">Where did this code come from?</h2>
+<p>In an introductory Python course, a student’s file can contain starter code, a snippet they pasted, and the part they wrote themselves. By the time someone reviews the assignment, the file alone tells very little of that story.</p>
+<p>I built a VS Code extension that lets students record a source when they paste into a Python file or notebook. A separate comparison tool accounts for the starter template, so the reviewer can spend their time on the student’s changes. We use the extension in our undergraduate course.</p>
+</section>
+<section id="experience" data-screen data-app="experience" data-title="Experience" class="screen">
+<h2 tabindex="-1">Experience</h2>
+<div class="career"><details><summary><span>Graduate Research Assistant</span><small>Sep 2026 – Present</small></summary><p><strong>Oregon State University.</strong> Translate practitioner interviews into design requirements and evaluation plans for robot-assisted physical therapy.</p></details>
+<details><summary><span>Graduate Teaching Assistant</span><small>Sep 2025 – Present</small></summary><p><strong>OSU College of Engineering.</strong> Develop labs and course materials for graduate Intro to Robotics and undergraduate Intro to Python Programming.</p></details>
+<details><summary><span>Human–Robot Interaction Researcher</span><small>May 2024 – Present</small></summary><p><strong>OSU SHARE Lab.</strong> Design robot behaviors and run human-subjects studies on expressive motion and social feedback.</p></details>
+<details><summary><span>Senior Sports Program Associate</span><small>Sep 2024 – Jun 2025</small></summary><p><strong>OSU Dixon Sports Programs.</strong> Managed intramural leagues and built tools to check player eligibility.</p></details>
+<details><summary><span>Club President</span><small>May 2022 – Jun 2025</small></summary><p><strong>OSU Men’s Club Volleyball.</strong> Grew membership from 44 to 113 and annual fundraising from $1,500 to $20,000 while organizing clinics and tournaments.</p></details>
+<details><summary><span>Application Engineering Intern</span><small>Jun – Sep 2022</small></summary><p><strong>Sanyo Denki America.</strong> Built mechanical prototypes and wrote embedded control software for multi-gantry demonstrations using cameras, sensors, and operator input.</p></details></div>
+</section>
+<section id="education" data-screen data-app="education" data-title="Education" class="screen">
+<h2 tabindex="-1">Education &amp; skills</h2>
+<div class="education-grid"><div><h3>Oregon State University</h3><p class="meta">Expected June 2027</p><p>M.S., double major in Robotics and Artificial Intelligence</p><p class="meta">June 2025 · Cum laude</p><p>B.S., double major in Computer Science (Robotic Intelligence track) and Mechanical Engineering</p></div>
     <div id="skills"><h3>Technical skills</h3><p class="meta">Programming &amp; perception</p><p>Python, C++, TypeScript, OpenCV, PyTorch, multimodal perception</p><p class="meta">Robotics &amp; simulation</p><p>ROS and ROS 2, Webots, Gazebo, PyBullet, URDF, SolidWorks</p></div></div>
-  </section>
-  <section id="contact" class="resume-section"><div class="section-head"><h2><span class="section-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#mail"/></svg></span> Contact</h2></div>
-  <div class="contact"><a class="email" href="mailto:sabbek@oregonstate.edu">sabbek@oregonstate.edu</a><div><a href="https://www.linkedin.com/in/kevin-a-sabbe/">LinkedIn</a><a href="https://github.com/sabbekosu">GitHub</a><a href="assets/Kevin_Sabbe_Resume.pdf" download>Download CV</a></div></div>
-  </section>
+</section>
+<section id="contact" data-screen data-app="contact" data-title="Contact" class="screen">
+<h2 tabindex="-1">Get in touch</h2><p class="contact-note">I’d love to hear from people working on expressive motion, assistive robotics, or how robots respond to human feedback.</p><a class="email" href="mailto:sabbek@oregonstate.edu"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#mail"/></svg> sabbek@oregonstate.edu</a><div class="page-actions"><a href="https://www.linkedin.com/in/kevin-a-sabbe/">LinkedIn</a><a href="https://github.com/sabbekosu">GitHub</a><a href="assets/Kevin_Sabbe_Resume.pdf" download>Download CV</a></div>
+</section>
+    </div>
+    <div class="command"><a id="parent-command" href="#projects"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#folder"/></svg> <span>Open research</span></a></div>
+   </div></div>
+  </div>
+  <div class="hinge" aria-hidden="true"><i></i><i></i></div>
+ </div>
+ <section id="motion-lab" class="lab" aria-labelledby="lab-title">
+ <div class="lab-heading"><h2 id="lab-title">Motion player</h2><span>NAO / Webots</span></div>
+ <div class="bench">
+  <div class="deck">
+   <div class="deck-title"><span>Simulation playback</span><span id="clip-name">Wave hello</span></div>
+   <video id="player" controls playsinline preload="none" width="800" height="450" poster="assets/nao-wave.webp" aria-label="Wave hello, silent Webots simulation"><source src="assets/nao-wave.mp4" type="video/mp4"></video>
+   <div class="pose-strip" hidden><span>Inspect a pose</span><div id="poses"></div></div>
+  </div>
+  <div class="library"><h3>From prompt to gesture</h3><p>These are actual runs from my motion generator. Pick a prompt to see how the same robot uses its hands, posture, and timing to get a different idea across.</p>
+   <nav class="clips" aria-label="Gesture recordings">
+    <a href="assets/nao-wave.mp4" data-clip="wave" data-times="0.4,2.6,5.5" data-label="Wave hello">Wave hello</a>
+    <a href="assets/nao-bow.mp4" data-clip="bow" data-times="0.5,3.8,6.1" data-label="Bow to applause">Bow to applause</a>
+    <a href="assets/nao-disapproval.mp4" data-clip="disapproval" data-times="0.5,3.0,5.7" data-label="Show strong disapproval">Show strong disapproval</a>
+   </nav><a class="story-link" href="#motion">How the gestures are made</a>
+  </div>
+ </div></section>
 </main>
-<footer class="wrap"><span>© 2026 Kevin Sabbe</span><a href="#top">Back to top</a></footer>
-</body>
-</html>
+<footer class="wrap"><span>Kevin Sabbe · Oregon State University</span><a href="#profile">Return to profile</a></footer>
+</body></html>
